@@ -12,7 +12,8 @@ function apiInit(args, videoSize) {
 		json: true,
 		form: {
 			upload_phase: 'start',
-			file_size: videoSize
+			file_size: videoSize,
+			...args['initParameters']
 		}
 	};
 
