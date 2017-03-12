@@ -26,11 +26,11 @@ function apiFinish(args, id, video_id) {
 	var options = {
 		method: 'POST',
 		uri: url + '/v2.6/' + args.id + '/videos',
-		form: {
+		form: _extends({
 			access_token: args.token,
 			upload_phase: 'finish',
 			upload_session_id: id
-		},
+		}, args['initParameters']),
 		json: true
 	};
 

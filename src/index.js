@@ -27,7 +27,8 @@ function apiFinish(args, id, video_id) {
 		form: {
 			access_token: args.token,
 			upload_phase: 'finish',
-			upload_session_id: id
+			upload_session_id: id,
+			...args['initParameters']
 		},
 		json: true
 	};
